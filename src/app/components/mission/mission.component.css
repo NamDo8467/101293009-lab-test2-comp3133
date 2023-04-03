@@ -1,4 +1,4 @@
-.example-card {
+.mission-card {
   width: 800px;
   box-shadow: 5px 5px 5px rgb(210, 205, 205);
   height: fit-content;
@@ -8,11 +8,11 @@
   border-top: 1px solid rgb(234, 229, 229);
   padding: 0 10px;
 }
-.example-card:hover {
+.mission-card:hover {
   cursor: pointer;
 }
 
-.example-header-image {
+.mission-header-image {
   background-image: url("https://cdn.icon-icons.com/icons2/665/PNG/512/rocket_icon-icons.com_60268.png");
   background-size: cover;
 }
@@ -21,14 +21,5 @@
   height: 220px;
   width: 220px;
   margin-bottom: 10px;
-}
-.general-information{
-	display: flex;
-}
-
-.links{
-	display: flex;
-	width: 70px;
-	/* border: 1px solid black; */
-	justify-content: space-between;
+  margin-left: 12px;
 }
