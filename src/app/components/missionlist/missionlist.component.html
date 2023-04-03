@@ -1,0 +1,13 @@
+<div class="mission-container">
+  <div class="mission-filter">
+    <input
+      type="text"
+	  name="searchYear"
+      placeholder="Search mission by year"
+      [(ngModel)]="searchYear"
+    />
+    <button type="submit" (click)="searchByYear()">Search</button>
+  </div>
+  <app-mission *ngFor="let mission of missionList" [mission]="mission">
+  </app-mission>
+</div>

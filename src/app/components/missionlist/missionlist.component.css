@@ -1,0 +1,9 @@
+.mission-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.mission-filter {
+  margin: 20px 0;
+}
