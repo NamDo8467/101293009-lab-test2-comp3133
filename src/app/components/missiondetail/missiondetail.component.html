@@ -1,1 +1,60 @@
-<p>missiondetail works!</p>
+<mat-card class="mission-card" (click)="toggleMissionDetail()">
+  <mat-card-header>
+    <div mat-card-avatar class="mission-header-image"></div>
+    <!-- <div>{{openMissionDetail}}</div> -->
+    <mat-card-title style="font-size: large">{{
+      mission.mission_name
+    }}</mat-card-title>
+    <mat-card-subtitle style="font-size: large">{{
+      mission.launch_year
+    }}</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
+    <div class="general-information">
+      <div class="patch-image">
+        <img
+          mat-card-image
+          class="mission-patch"
+          src="{{ mission.links.mission_patch_small }}"
+          alt="Photo of a mission patch"
+        />
+      </div>
+      <div class="information">
+        <h2 style="text-decoration: underline; margin-bottom: 0">
+          Mission - {{ mission.mission_name }}
+        </h2>
+        <p>Name: {{ mission.mission_name }}</p>
+        <p>Launch Year: {{ mission.launch_year }}</p>
+        <p>Launch Success: {{ mission.launch_success }}</p>
+        <br />
+        <h2 style="margin-bottom: 5px">Rocket</h2>
+        <p>Name: {{ mission.rocket.rocket_name }}</p>
+        <p>Type: {{ mission.rocket.rocket_type }}</p>
+        <br />
+        <h2 style="margin-bottom: 5px">Launch Site</h2>
+        <p>Name: {{ mission.launch_site.site_name_long }}</p>
+      </div>
+    </div>
+    <div class="details" style="margin-bottom: 15px">
+      <h2 style="margin-bottom: 5px">Launch Details</h2>
+      <p style="font-size: large; margin: 0">{{ mission.details }}</p>
+    </div>
+    <div class="more-information">
+      <h2 style="margin-bottom: 5px">More Information</h2>
+      <div class="links">
+        <a href="{{ mission.links.video_link }}" target="_blank">
+          <mat-icon style="color: red">movie</mat-icon>
+        </a>
+        <br />
+        <a href="{{ mission.links.article_link }}" target="_blank">
+          <mat-icon style="color: #3838e6">send</mat-icon>
+        </a>
+      </div>
+    </div>
+  </mat-card-content>
+  <!-- <mat-card-actions>
+		  <button mat-button>LIKE</button>
+		  <button mat-button>SHARE</button>
+		</mat-card-actions> -->
+</mat-card>
